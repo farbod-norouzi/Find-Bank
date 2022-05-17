@@ -1,19 +1,18 @@
+import os
 from os import system
-    
-# Check the requirements
-
-try:
-    import datetime
-    from colorama import Fore 
-except ImportError:
-   system("pip install os ")
-   system("pip install colorama ")
-   system("pip install datetime")
-   exit("\n\nRun script Again")
+import datetime
+from colorama import Fore 
+import platform 
 
 # Start APP
+def clear():
+   result = platform.uname()[0]
+   if result == "Windows":
+      system("cls")
+   elif result == "Linux":
+      system("clear")
+clear()
 
-os.system("cls")
 print(Fore.RED + """ ______              _        _______ _           _             
 (____  \            | |      (_______|_)         | |            
  ____)  ) ____ ____ | |  _    _____   _ ____   _ | | ____  ____ 
