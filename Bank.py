@@ -1,8 +1,8 @@
+from os import system
+    
 # Check the requirements
 
 try:
-    import os
-    from os import system
     import datetime
     from colorama import Fore 
 except ImportError:
