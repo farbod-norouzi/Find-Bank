@@ -1,6 +1,9 @@
 # Find-Bank
 Find the name of the bank with the first 6 numbers of the card.
 
+# Attention
+* Note that be sure to install libraries from the "Required plugins" section so that you do not have any problems running the program! *
+
 # Plugins required
 - pip install python
 - pip install datetime
