@@ -1,6 +1,17 @@
-import datetime
-from colorama import Fore 
-import os
+# Check the requirements
+
+try:
+    import os
+    from os import system
+    import datetime
+    from colorama import Fore 
+except ImportError:
+   system("pip install os ")
+   system("pip install colorama ")
+   system("pip install datetime")
+   exit("\n\nRun script Again")
+
+# Start APP
 
 os.system("cls")
 print(Fore.RED + """ ______              _        _______ _           _             
@@ -10,6 +21,7 @@ print(Fore.RED + """ ______              _        _______ _           _
 | |__)  | ( | | | | | |< (   | |     | | | | ( (_| ( (/ /| |    
 |______/ \_||_|_| |_|_| \_)  |_|     |_|_| |_|\____|\____)_|    
                                                                 """,Fore.WHITE)
+                                                                
 
 datetime_object = datetime.datetime.now()
 print(datetime_object,'\n')
@@ -109,4 +121,4 @@ elif sixnum == "639599":
 else:
     print(Fore.RED+ "Bank : Unknown Bank"+Fore.RESET)
     print(Fore.YELLOW+ "Alert : Please Try Again"+Fore.RESET)
-    print("Manufacturer:",Fore.MAGENTA+ "Senior.Farbod",'\n')
+    print("Manufacturer:",Fore.MAGENTA+ "Senior.Farbod"+Fore.RESET,'\n')
